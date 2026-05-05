@@ -33,19 +33,31 @@ export const about_data: AboutData = {
         id: 1,
         title: 'Augment, don’t replace',
         description:
-          'Toppira is designed to work with your current tools—not against them. We integrate, we automate, and we suggest, but you stay in control.',
+          'Toppira is built on a simple belief: the tools you already know — reminders, todos, calendars, notes — are not the problem. We don’t ask you to relearn everything. Instead, we combine these familiar apps with AI, so your existing workflows become smarter, more connected, and easier to communicate through.',
       },
       {
         id: 2,
-        title: 'Transparent by default',
+        title: 'Transparent and open by design',
         description:
-          'From architecture to configuration, we aim for clarity. Open-source code, auditable behavior, and predictable performance are non-negotiable.',
+          'The free edition of Toppira is fully open source. That means our code is visible, auditable, and extensible. You can see how data is handled, how AI is applied, and what decisions are being made. No black boxes, no hidden behavior — transparency, independence, and community participation are built into the platform.',
       },
       {
         id: 3,
-        title: 'Built for real teams',
+        title: 'Keep humans in control',
         description:
-          'The platform is shaped around real-world workflows: code review, incident response, release management, and long‑term maintainability.',
+          'AI in Toppira is there to assist, not to override. You choose what to automate, which suggestions to accept, and how your workflows should behave. We focus on better and faster communication — clearer intent, fewer misunderstandings, and more relevant information — while ensuring decisions stay in human hands.',
+      },
+      {
+        id: 4,
+        title: 'Connect context across tools',
+        description:
+          'Most tools still live in isolation. You jump between apps and manually connect the dots. Toppira uses AI to bridge these gaps: sharing context across reminders, tasks, calendars, and notes so that what you’re doing, what you’ve done, and what matters next are aligned. Your tools stay familiar; the experience becomes coherent.',
+      },
+      {
+        id: 5,
+        title: 'Build with and for the community',
+        description:
+          'Toppira is a platform, not a closed product. Developers can extend it, teams can adapt it, and organizations can shape it to their needs. Issues, ideas, and contributions from the community help define the roadmap. We see open source not just as a license model, but as a way to build trust and evolve together.',
       },
     ],
   },
