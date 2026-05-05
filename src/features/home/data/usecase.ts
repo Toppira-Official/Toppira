@@ -1,6 +1,6 @@
 import type { UseCase } from '../types/usecase';
 
-export const useCasesData: UseCase[] = [
+export const usecases_data: UseCase[] = [
   {
     id: 'individuals',
     label: 'Individuals',

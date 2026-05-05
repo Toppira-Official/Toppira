@@ -4,7 +4,7 @@ import { PiUsersThree } from 'react-icons/pi';
 import { TbPlugConnected } from 'react-icons/tb';
 import type { TrustItem } from '../types/trust';
 
-export const trustData: TrustItem[] = [
+export const trust_data: TrustItem[] = [
   {
     icon: <FiUnlock size={28} className="text-primary" />,
     title: 'Fully Open Source',

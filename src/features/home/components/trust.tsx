@@ -1,6 +1,6 @@
 import type React from 'react';
 import type { TrustItem } from '../types/trust';
-import { trustData } from '../data/trust';
+import { trust_data } from '../data/trust';
 import clsx from 'clsx';
 
 interface TrustCardProps {
@@ -33,7 +33,7 @@ export const TrustSection: React.FC = () => {
         </div>
 
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-2 lg:grid-cols-4">
-          {trustData.map((item, index) => (
+          {trust_data.map((item, index) => (
             <TrustCard key={index} item={item} />
           ))}
         </div>

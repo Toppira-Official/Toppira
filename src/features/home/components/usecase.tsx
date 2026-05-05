@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { useCasesData } from '../data/usecase';
+import { usecases_data } from '../data/usecase';
 import clsx from 'clsx';
 
 export const UseCases: React.FC = () => {
-  const [selectedId, setSelectedId] = useState(useCasesData[0].id);
+  const [selectedId, setSelectedId] = useState(usecases_data[0].id);
 
-  const selectedCase = useCasesData.find((c) => c.id === selectedId);
+  const selectedCase = usecases_data.find((c) => c.id === selectedId);
 
   return (
     <section className="container">
       <h2 className="mb-8 text-center text-4xl">Who Is It For?</h2>
 
       <div className="mb-12 flex flex-wrap justify-center gap-6">
-        {useCasesData.map(({ id, label }) => {
+        {usecases_data.map(({ id, label }) => {
           const isActive = selectedId === id;
           return (
             <button

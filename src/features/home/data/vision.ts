@@ -1,6 +1,6 @@
 import type { VisionData } from '../types/vision';
 
-export const visionData: VisionData = {
+export const vision_data: VisionData = {
   badge: 'Our Philosophy',
   title: "We don't replace your tools.",
   highlight: 'We make them smarter.',
