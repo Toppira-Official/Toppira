@@ -39,6 +39,16 @@
 }
 
 @layer base {
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-foreground;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-sm;
+  }
+
   .dark {
     --color-background: #0a0a08;
     --color-foreground: #1a1a18;
