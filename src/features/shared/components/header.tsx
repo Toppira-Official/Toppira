@@ -4,6 +4,7 @@ import { header_items } from '../data/header_items';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import { useTheme } from '../store/theme';
 
 const Item: React.FC<HeaderItem> = ({ text, link }) => {
   return (
@@ -36,12 +37,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
 };
 
 export const Header: React.FC = () => {
-  const [isDark, setIsDark] = React.useState<boolean>(false);
-
-  React.useEffect(() => {
-    if (isDark) document.documentElement.classList.add('dark');
-    else document.documentElement.classList.remove('dark');
-  }, [isDark]);
+  const { theme, toggle } = useTheme((state) => state);
 
   return (
     <header className="bg-foreground flex h-16 items-center">
@@ -52,11 +48,8 @@ export const Header: React.FC = () => {
         </div>
 
         <div>
-          <button
-            className="cursor-pointer text-2xl"
-            onClick={() => setIsDark((prev) => !prev)}
-          >
-            {isDark ? <MdLightMode /> : <MdDarkMode />}
+          <button className="cursor-pointer text-2xl" onClick={() => toggle()}>
+            {theme === 'dark' ? <MdLightMode /> : <MdDarkMode />}
           </button>
         </div>
       </div>

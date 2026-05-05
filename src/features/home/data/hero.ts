@@ -9,5 +9,4 @@ export const hero_date: HeroData = {
     'It is designed for individuals, teams, developers, and organizations who want transparency, customization, and community-driven innovation.',
     'The free edition is fully open-source, enabling anyone to use, modify, and contribute.',
   ],
-  img: '',
 };
