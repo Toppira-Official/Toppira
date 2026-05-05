@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
   const { theme, toggle } = useTheme((state) => state);
 
   return (
-    <header className="bg-foreground flex h-16 items-center">
+    <header className="bg-foreground border-border sticky top-0 z-50 flex h-16 items-center border-b">
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-20">
           <h1 className="font-ernesto text-4xl md:text-5xl">Toppira</h1>
