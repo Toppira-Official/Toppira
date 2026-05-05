@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import { CommonLayout } from './features/shared/components/layout';
-import { Home } from './pages/home';
+import '@/App.css';
+import { CommonLayout } from '~pages/layout';
+import { Home } from '~pages/home';
 
 function App() {
   return (
