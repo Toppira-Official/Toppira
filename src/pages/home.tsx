@@ -2,6 +2,7 @@ import { HowItWorks } from '@/features/home/components/how_it_works';
 import { TrustSection } from '@/features/home/components/trust';
 import { UseCases } from '@/features/home/components/usecase';
 import { USPSection } from '@/features/home/components/USP';
+import { Vision } from '@/features/home/components/vision';
 import type React from 'react';
 import { Hero } from '~features/home/components/hero';
 import { ProblemSolution } from '~features/home/components/problem_solution';
@@ -15,6 +16,7 @@ export const Home: React.FC = () => {
       <HowItWorks />
       <UseCases />
       <TrustSection />
+      <Vision />
     </div>
   );
 };
