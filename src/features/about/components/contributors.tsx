@@ -1,30 +1,26 @@
+import type React from 'react';
 import { contributors_data } from '../data/contributors';
 import type { Contributor } from '../types/contributors';
-import { FaGithub, FaGlobe, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaGlobe, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
-export function ContributorsSection() {
+export const ContributorsSection: React.FC = () => {
   const { eyebrow, title, subtitle, description, contributors } =
     contributors_data;
 
   return (
-    <section className="bg-foreground border-border border-t">
-      <div className="mx-auto max-w-5xl px-6 py-14">
+    <section className="bg-foreground border-border">
+      <div className="container py-8">
         <div className="max-w-2xl">
           {eyebrow && (
-            <p className="text-accent text-xs font-medium tracking-[0.2em] uppercase">
+            <p className="text-accent text-xs tracking-[0.2em] uppercase">
               {eyebrow}
             </p>
           )}
 
-          <h2
-            className="text-primary mt-2 text-xl font-semibold md:text-2xl"
-            style={{ fontFamily: 'var(--font-ernesto)' }}
-          >
-            {title}
-          </h2>
+          <h2 className="text-primary font-ernesto mt-2 text-4xl">{title}</h2>
 
           {subtitle && (
-            <p className="text-accent mt-1 text-xs font-medium tracking-[0.2em] uppercase">
+            <p className="text-accent mt-1 text-xs tracking-[0.2em] uppercase">
               {subtitle}
             </p>
           )}
@@ -44,13 +40,13 @@ export function ContributorsSection() {
       </div>
     </section>
   );
-}
+};
 
 interface ContributorCardProps {
   contributor: Contributor;
 }
 
-function ContributorCard({ contributor }: ContributorCardProps) {
+const ContributorCard: React.FC<ContributorCardProps> = ({ contributor }) => {
   const {
     name,
     handle,
@@ -58,6 +54,7 @@ function ContributorCard({ contributor }: ContributorCardProps) {
     location,
     expertise,
     githubUrl,
+    linkedinUrl,
     twitterUrl,
     websiteUrl,
     avatarUrl,
@@ -81,16 +78,16 @@ function ContributorCard({ contributor }: ContributorCardProps) {
             className="border-border h-10 w-10 rounded-full border object-cover"
           />
         ) : (
-          <div className="border-border bg-background text-accent flex h-10 w-10 items-center justify-center rounded-full border text-xs font-semibold">
+          <div className="border-border bg-background text-accent flex h-10 w-10 items-center justify-center rounded-full border text-xs">
             {initials}
           </div>
         )}
 
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
-            <h3 className="text-primary text-sm font-semibold">{name}</h3>
+            <h3 className="text-primary text-sm">{name}</h3>
             {isCore && (
-              <span className="border-border bg-primary/5 text-accent rounded-full border px-2 py-0.5 text-[10px] font-medium">
+              <span className="border-border bg-primary/5 text-accent rounded-full border px-2 py-0.5 text-[10px]">
                 Core
               </span>
             )}
@@ -107,7 +104,7 @@ function ContributorCard({ contributor }: ContributorCardProps) {
         <p className="text-muted mt-4 text-xs leading-relaxed">{expertise}</p>
       )}
 
-      {(githubUrl || twitterUrl || websiteUrl) && (
+      {(githubUrl || linkedinUrl || twitterUrl || websiteUrl) && (
         <div className="text-accent mt-4 flex items-center gap-3 text-xs">
           {githubUrl && (
             <a
@@ -118,6 +115,17 @@ function ContributorCard({ contributor }: ContributorCardProps) {
             >
               <FaGithub className="h-3 w-3" />
               <span>GitHub</span>
+            </a>
+          )}
+          {linkedinUrl && (
+            <a
+              href={linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-primary inline-flex items-center gap-1"
+            >
+              <FaLinkedin className="h-3 w-3" />
+              <span>LinkedIn</span>
             </a>
           )}
           {twitterUrl && (
@@ -146,4 +154,4 @@ function ContributorCard({ contributor }: ContributorCardProps) {
       )}
     </article>
   );
-}
+};

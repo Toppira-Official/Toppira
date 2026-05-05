@@ -9,6 +9,7 @@ export interface Contributor {
   location?: string;
   expertise?: string;
   githubUrl?: string;
+  linkedinUrl?: string;
   twitterUrl?: string;
   websiteUrl?: string;
   isCore?: boolean;
