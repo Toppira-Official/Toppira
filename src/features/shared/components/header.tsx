@@ -1,8 +1,9 @@
-import type React from 'react';
+import React from 'react';
 import type { header_item } from '../types/header_item';
 import { header_items } from '../data/header_items';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 const Item: React.FC<header_item> = ({ text, link }) => {
   return (
@@ -35,11 +36,29 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
 };
 
 export const Header: React.FC = () => {
+  const [isDark, setIsDark] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    if (isDark) document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
+  }, [isDark]);
+
   return (
     <header className="bg-foreground flex h-16 items-center">
-      <div className="container flex items-center gap-20">
-        <h1 className="font-ernesto text-5xl font-bold">Toppira</h1>
-        <Items items={header_items} />
+      <div className="container flex items-center justify-between">
+        <div className="flex items-center gap-20">
+          <h1 className="font-ernesto text-5xl font-bold">Toppira</h1>
+          <Items items={header_items} />
+        </div>
+
+        <div>
+          <button
+            className="cursor-pointer text-2xl"
+            onClick={() => setIsDark((prev) => !prev)}
+          >
+            {isDark ? <MdLightMode /> : <MdDarkMode />}
+          </button>
+        </div>
       </div>
     </header>
   );
