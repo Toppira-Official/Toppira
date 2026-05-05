@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
   const isDark = theme === 'dark';
 
   return (
-    <section className="container grid grid-cols-2 gap-12 md:gap-8">
+    <section className="container grid grid-cols-2 gap-8">
       <div className="col-span-2 md:col-span-1">
         <h2 className="font-ernesto mb-4 text-4xl sm:text-6xl">
           {hero_date.question}
@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="col-span-2 flex max-h-80 justify-center md:col-span-1 md:justify-end lg:justify-center">
+      <div className="hidden max-h-80 justify-center md:flex">
         <img
           className={
             'drop-shadow-accent rounded-xl object-cover drop-shadow-2xl'
