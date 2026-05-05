@@ -25,7 +25,7 @@ interface ItemsProps {
 }
 const Items: React.FC<ItemsProps> = ({ items }) => {
   return (
-    <ul className="flex items-center gap-6">
+    <ul className="hidden items-center gap-6 md:flex">
       {items.map((el) => (
         <li key={`header_item_${el.link}`}>
           <Item {...el} />
@@ -47,7 +47,9 @@ export const Header: React.FC = () => {
     <header className="bg-foreground flex h-16 items-center">
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-20">
-          <h1 className="font-ernesto text-5xl font-bold">Toppira</h1>
+          <h1 className="font-ernesto text-4xl font-bold md:text-5xl">
+            Toppira
+          </h1>
           <Items items={header_items} />
         </div>
 
