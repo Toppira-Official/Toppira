@@ -6,7 +6,7 @@ export const AboutHero: React.FC = () => {
 
   return (
     <section className="container">
-      <div className="flex flex-col gap-8 px-6 py-16 md:items-center md:justify-between lg:flex-row">
+      <div className="flex flex-col gap-8 md:items-center md:justify-between lg:flex-row">
         <div className="max-w-xl">
           <p className="text-accent text-xs tracking-[0.2em] uppercase">
             {eyebrow}

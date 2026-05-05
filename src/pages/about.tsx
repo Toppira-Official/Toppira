@@ -5,13 +5,11 @@ import { AboutWhatIs } from '@/features/about/components/what_is';
 
 export function About() {
   return (
-    <>
-      <main className="bg-background text-primary min-h-screen">
-        <AboutHero />
-        <AboutWhatIs />
-        <AboutPrinciples />
-        <ContributorsSection />
-      </main>
-    </>
+    <main className="mt-20 space-y-20">
+      <AboutHero />
+      <AboutWhatIs />
+      <AboutPrinciples />
+      <ContributorsSection />
+    </main>
   );
 }

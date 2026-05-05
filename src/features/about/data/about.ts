@@ -22,8 +22,8 @@ export const about_data: AboutData = {
   whatIs: {
     title: 'What is Toppira?',
     columns: [
-      'Toppira is a platform that connects your existing tools into a cohesive, intelligent workflow. Instead of building yet another isolated SaaS product, we focus on bridges: connecting your repositories, CI pipelines, review processes, and documentation into a single, augmented experience.',
-      'At its core, Toppira is open-source. You can inspect how it works, extend it with your own plugins, or host it on your own infrastructure. AI is a core ingredient—but never the whole story. Control and clarity always come first.',
+      'Toppira is an open-source software development platform focused on combining everyday applications with artificial intelligence to create better and faster communication. Instead of replacing familiar tools like reminders, notes, calendars, and todos, it enhances them with AI — keeping workflows familiar while adding smart context-aware behavior.',
+      'Toppira helps users reduce friction, make quicker decisions, and automate repetitive tasks by allowing AI to understand context across applications. It is designed for individuals, teams, developers, and organizations who want transparency, customization, and community-driven innovation. The free edition is fully open-source, enabling anyone to use, modify, and contribute.',
     ],
   },
   principles: {
