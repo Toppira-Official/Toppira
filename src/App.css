@@ -1,14 +1,6 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'blacksword';
-  src: url('./assets/fonts/blacksword.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'chopin';
   src: url('./assets/fonts/chopin.ttf') format('truetype');
   font-weight: 200;
@@ -26,47 +18,46 @@
 
 @theme {
   /* Fonts */
-  --font-blacksword: 'blacksword';
   --font-chopin: 'chopin';
   --font-ernesto: 'ernesto';
 
-  /* Colors */
-  --color-background: oklch(100% 0 0);
-  --color-foreground: oklch(20% 0.02 250);
+  /* Colors - Light Theme */
+  --color-background: #f5f5f0; /* Main page background */
+  --color-foreground: #e8e8e0; /* Secondary background or content area */
 
-  --color-surface: oklch(97% 0.01 250);
-  --color-surface-2: oklch(94% 0.01 250);
+  --color-surface: #ffffff; /* Primary surface (cards, containers) */
+  --color-surface-2: #f0f0ea; /* Secondary surface (hover states, subtle panels) */
 
-  --color-border: oklch(90% 0.005 250);
+  --color-border: #d4d4c8; /* Border and divider color */
 
-  --color-primary: oklch(65% 0.25 270);
-  --color-primary-foreground: oklch(100% 0 0);
+  --color-primary: #2c2c28; /* Primary brand color (buttons, headers) */
+  --color-primary-foreground: #ffffff; /* Text/icon color on primary elements */
 
-  --color-accent: oklch(70% 0.25 290);
+  --color-accent: #8b8b7a; /* Accent elements (links, highlights) */
 
-  --color-muted: oklch(60% 0.02 250);
+  --color-muted: #9ca3af; /* Muted text or placeholders */
 }
 
 @layer base {
   .dark {
-    --color-background: oklch(15% 0.02 250);
-    --color-foreground: oklch(96% 0.01 250);
+    --color-background: #0a0a08;
+    --color-foreground: #1a1a18;
 
-    --color-surface: oklch(20% 0.02 250);
-    --color-surface-2: oklch(24% 0.02 250);
+    --color-surface: #14140f;
+    --color-surface-2: #1e1e1a;
 
-    --color-border: oklch(30% 0.02 250);
+    --color-border: #2d2d28;
 
-    --color-primary: oklch(68% 0.25 270);
-    --color-primary-foreground: oklch(100% 0 0);
+    --color-primary: #d4d4c8;
+    --color-primary-foreground: #0a0a08;
 
-    --color-accent: oklch(72% 0.25 290);
+    --color-accent: #a8a898;
 
-    --color-muted: oklch(70% 0.02 250);
+    --color-muted: #6b7280;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-primary font-chopin antialiased;
   }
 }
 
