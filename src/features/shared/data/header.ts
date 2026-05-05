@@ -1,4 +1,4 @@
-import type { HeaderItem } from '../types/header_item';
+import type { HeaderItem } from '../types/header';
 
 export const header_items: HeaderItem[] = [
   { text: 'home', link: '/' },

@@ -3,7 +3,7 @@ import { how_it_works_data } from '../data/how_it_works';
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section className="bg-foreground py-8">
+    <section id="how-it-works" className="bg-foreground py-8">
       <div className="container flex flex-col items-center">
         <h2 className="font-ernesto mb-8 text-4xl">How It Works</h2>
 

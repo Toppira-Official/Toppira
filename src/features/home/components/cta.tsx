@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { CTAAction } from '../types/cta';
 import { Link } from 'react-router-dom';
 import { cta_data } from '../data/cta';
+import type React from 'react';
 
 const buttonVariants = {
   primary: 'bg-primary text-primary-foreground hover:opacity-90',
@@ -9,7 +10,11 @@ const buttonVariants = {
   ghost: 'bg-transparent text-muted hover:text-primary hover:bg-surface',
 };
 
-const CTAButton = ({ action }: { action: CTAAction }) => {
+interface CTAButtonProps {
+  action: CTAAction;
+}
+
+const CTAButton: React.FC<CTAButtonProps> = ({ action }) => {
   const variant = action.variant ?? 'primary';
 
   return (
@@ -26,9 +31,9 @@ const CTAButton = ({ action }: { action: CTAAction }) => {
   );
 };
 
-export const CTA = () => {
+export const CTA: React.FC = () => {
   return (
-    <section className="bg-foreground py-24">
+    <section id='cta' className="bg-foreground py-24">
       <div className="mx-auto max-w-5xl px-6">
         <div className="border-border bg-surface rounded-3xl border px-8 py-14 text-center shadow-sm md:px-12 md:py-20">
           {cta_data.badge && (

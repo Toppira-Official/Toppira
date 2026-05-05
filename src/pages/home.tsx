@@ -10,7 +10,7 @@ import { ProblemSolution } from '~features/home/components/problem_solution';
 
 export const Home: React.FC = () => {
   return (
-    <div className="my-10 space-y-20 md:my-20 lg:my-30">
+    <div className="mt-20 space-y-20">
       <Hero />
       <ProblemSolution />
       <USP />

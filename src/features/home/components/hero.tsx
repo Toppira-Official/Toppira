@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
   const isDark = theme === 'dark';
 
   return (
-    <section className="container grid grid-cols-2 gap-8">
+    <section id='hero' className="container grid grid-cols-2 gap-8">
       <div className="col-span-2 md:col-span-1">
         <h2 className="font-ernesto mb-4 text-4xl sm:text-6xl">
           {hero_date.question}

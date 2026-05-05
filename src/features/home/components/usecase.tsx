@@ -8,7 +8,7 @@ export const UseCases: React.FC = () => {
   const selectedCase = usecases_data.find((c) => c.id === selectedId);
 
   return (
-    <section className="container">
+    <section id="usecases" className="container">
       <h2 className="mb-8 text-center text-4xl">Who Is It For?</h2>
 
       <div className="mb-12 flex flex-wrap justify-center gap-6">

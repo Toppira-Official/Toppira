@@ -22,7 +22,7 @@ const TrustCard: React.FC<TrustCardProps> = ({ item }) => (
 
 export const Trust: React.FC = () => {
   return (
-    <section className="bg-foreground py-8">
+    <section id="trust" className="bg-foreground py-8">
       <div className="container">
         <div className="mx-auto mb-12 max-w-6xl px-6 text-center">
           <h2 className="text-4xl font-bold">Open Source & Built on Trust</h2>

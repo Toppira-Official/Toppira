@@ -1,6 +1,6 @@
 import React from 'react';
-import type { HeaderItem } from '../types/header_item';
-import { header_items } from '../data/header_items';
+import type { HeaderItem } from '../types/header';
+import { header_items } from '../data/header';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';

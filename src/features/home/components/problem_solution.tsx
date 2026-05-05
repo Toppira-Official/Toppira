@@ -20,7 +20,7 @@ const List: React.FC<ListProps> = ({ items, icon, iconColor }) => (
 
 export const ProblemSolution: React.FC = () => {
   return (
-    <section className="bg-foreground py-8">
+    <section id="problem_solution" className="bg-foreground py-8">
       <div className="container grid justify-items-center gap-8 px-6 md:grid-cols-2 md:gap-16">
         <div>
           <h2 className="font-ernesto mb-6 text-4xl">The Problems Today</h2>

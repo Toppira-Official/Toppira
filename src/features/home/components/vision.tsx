@@ -1,8 +1,9 @@
+import type React from 'react';
 import { vision_data } from '../data/vision';
 
-export const Vision = () => {
+export const Vision: React.FC = () => {
   return (
-    <section className="bg-background">
+    <section id="vision" className="bg-background">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <p className="text-muted mb-6 text-sm tracking-widest uppercase">
           {vision_data.badge}
