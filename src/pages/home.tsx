@@ -1,4 +1,5 @@
 import { HowItWorks } from '@/features/home/components/how_it_works';
+import { TrustSection } from '@/features/home/components/trust';
 import { UseCases } from '@/features/home/components/usecase';
 import { USPSection } from '@/features/home/components/USP';
 import type React from 'react';
@@ -13,6 +14,7 @@ export const Home: React.FC = () => {
       <USPSection />
       <HowItWorks />
       <UseCases />
+      <TrustSection />
     </div>
   );
 };
