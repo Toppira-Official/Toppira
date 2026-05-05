@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { footer_data } from '../data/footer';
 import type React from 'react';
 
@@ -25,12 +24,12 @@ export const Footer: React.FC = () => {
               <ul className="mt-4 space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <Link
-                      to={link.href}
+                    <a
+                      href={link.href}
                       className="text-muted hover:text-primary text-sm transition-colors duration-200"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
