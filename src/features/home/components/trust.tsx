@@ -20,7 +20,7 @@ const TrustCard: React.FC<TrustCardProps> = ({ item }) => (
   </div>
 );
 
-export const TrustSection: React.FC = () => {
+export const Trust: React.FC = () => {
   return (
     <section className="bg-foreground py-8">
       <div className="container">

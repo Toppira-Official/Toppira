@@ -22,7 +22,7 @@ const USPCard: React.FC<USPCardProps> = ({ item }) => {
   );
 };
 
-export const USPSection: React.FC = () => (
+export const USP: React.FC = () => (
   <section className="container">
     <div className="mx-auto mb-12 px-6 text-center">
       <h2 className="text-4xl">What Makes Toppira Different?</h2>

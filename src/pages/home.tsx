@@ -1,7 +1,8 @@
+import { CTA } from '@/features/home/components/cta';
 import { HowItWorks } from '@/features/home/components/how_it_works';
-import { TrustSection } from '@/features/home/components/trust';
+import { Trust } from '@/features/home/components/trust';
 import { UseCases } from '@/features/home/components/usecase';
-import { USPSection } from '@/features/home/components/USP';
+import { USP } from '@/features/home/components/USP';
 import { Vision } from '@/features/home/components/vision';
 import type React from 'react';
 import { Hero } from '~features/home/components/hero';
@@ -12,11 +13,12 @@ export const Home: React.FC = () => {
     <div className="my-10 space-y-20 md:my-20 lg:my-30">
       <Hero />
       <ProblemSolution />
-      <USPSection />
+      <USP />
       <HowItWorks />
       <UseCases />
-      <TrustSection />
+      <Trust />
       <Vision />
+      <CTA />
     </div>
   );
 };
