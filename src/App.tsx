@@ -1,13 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { CommonLayout } from './features/shared/components/layout';
+import { Home } from './pages/home';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<CommonLayout />}>
-          <Route path="/" />
+          <Route path="/" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

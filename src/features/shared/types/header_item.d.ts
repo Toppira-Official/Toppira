@@ -1,4 +1,4 @@
-export interface header_item {
+export interface HeaderItem {
   text: string;
   link: string;
 }
