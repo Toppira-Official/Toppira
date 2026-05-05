@@ -43,7 +43,9 @@ export const Header: React.FC = () => {
     <header className="bg-foreground border-border sticky top-0 z-50 flex h-16 items-center border-b">
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-20">
-          <h1 className="font-ernesto text-4xl md:text-5xl">Toppira</h1>
+          <h1 className="font-ernesto text-4xl md:text-5xl">
+            <Link to={'/'}>Toppira</Link>
+          </h1>
           <Items items={header_items} />
         </div>
 
