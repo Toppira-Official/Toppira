@@ -4,7 +4,6 @@ import { useTheme } from '@/features/shared/store/theme';
 
 import imgLight from '~assets/hero/toppira_light.png';
 import imgDark from '~assets/hero/toppira_dark.png';
-import clsx from 'clsx';
 
 export const Hero: React.FC = () => {
   const theme = useTheme((state) => state.theme);
@@ -25,10 +24,9 @@ export const Hero: React.FC = () => {
 
       <div className="col-span-2 flex max-h-80 justify-center md:col-span-1 md:justify-end lg:justify-center">
         <img
-          className={clsx('rounded-xl object-cover drop-shadow-2xl', {
-            'drop-shadow-white': isDark,
-            'drop-shadow-black': !isDark,
-          })}
+          className={
+            'drop-shadow-accent rounded-xl object-cover drop-shadow-2xl'
+          }
           src={isDark ? imgDark : imgLight}
           alt="hero_img"
         />
