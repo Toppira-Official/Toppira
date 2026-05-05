@@ -1,4 +1,5 @@
 import { HowItWorks } from '@/features/home/components/how_it_works';
+import { UseCases } from '@/features/home/components/usecase';
 import { USPSection } from '@/features/home/components/USP';
 import type React from 'react';
 import { Hero } from '~features/home/components/hero';
@@ -11,6 +12,7 @@ export const Home: React.FC = () => {
       <ProblemSolution />
       <USPSection />
       <HowItWorks />
+      <UseCases />
     </div>
   );
 };
