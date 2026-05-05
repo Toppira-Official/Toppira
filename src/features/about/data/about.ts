@@ -12,10 +12,10 @@ export const about_data: AboutData = {
     snapshot: {
       label: 'Snapshot',
       items: [
-        { label: 'Focus', value: 'Developer experience' },
-        { label: 'Model', value: 'Open-source core' },
-        { label: 'Built for', value: 'Teams & solo devs' },
-        { label: 'Stack', value: 'Modern JS + cloud-native' },
+        { label: 'Focus', value: 'Better living & higher performance' },
+        { label: 'Approach', value: 'Human-centered product design' },
+        { label: 'Built for', value: 'People, teams, and everyday life' },
+        { label: 'Outcome', value: 'Smarter, more effective experiences' },
       ],
     },
   },
