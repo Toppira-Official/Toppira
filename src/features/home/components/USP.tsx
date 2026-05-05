@@ -30,7 +30,7 @@ export const USPSection: React.FC = () => (
         Why choose Toppira? Here’s what sets us apart from the rest.
       </p>
     </div>
-    <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-4">
+    <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 lg:grid-cols-4">
       {usp_data.items.map((item, i) => (
         <USPCard key={i} item={item} />
       ))}
