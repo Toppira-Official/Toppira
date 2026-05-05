@@ -1,55 +1,38 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(20% 0.02 250);
 
-  --color-surface: hsl(var(--surface));
-  --color-surface-2: hsl(var(--surface-2));
+  --color-surface: oklch(97% 0.01 250);
+  --color-surface-2: oklch(94% 0.01 250);
 
-  --color-border: hsl(var(--border));
+  --color-border: oklch(90% 0.005 250);
 
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary: oklch(65% 0.25 270);
+  --color-primary-foreground: oklch(100% 0 0);
 
-  --color-accent: hsl(var(--accent));
+  --color-accent: oklch(70% 0.25 290);
 
-  --color-muted: hsl(var(--muted));
+  --color-muted: oklch(60% 0.02 250);
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222 20% 10%;
-
-    --surface: 220 20% 97%;
-    --surface-2: 220 20% 94%;
-
-    --border: 220 15% 90%;
-
-    --primary: 250 90% 60%;
-    --primary-foreground: 0 0% 100%;
-
-    --accent: 270 90% 65%;
-
-    --muted: 220 10% 45%;
-  }
-
   .dark {
-    --background: 222 25% 8%;
-    --foreground: 210 40% 96%;
+    --color-background: oklch(15% 0.02 250);
+    --color-foreground: oklch(96% 0.01 250);
 
-    --surface: 222 20% 12%;
-    --surface-2: 222 20% 16%;
+    --color-surface: oklch(20% 0.02 250);
+    --color-surface-2: oklch(24% 0.02 250);
 
-    --border: 222 18% 20%;
+    --color-border: oklch(30% 0.02 250);
 
-    --primary: 250 90% 65%;
-    --primary-foreground: 0 0% 100%;
+    --color-primary: oklch(68% 0.25 270);
+    --color-primary-foreground: oklch(100% 0 0);
 
-    --accent: 270 90% 70%;
+    --color-accent: oklch(72% 0.25 290);
 
-    --muted: 215 20% 65%;
+    --color-muted: oklch(70% 0.02 250);
   }
 
   body {
