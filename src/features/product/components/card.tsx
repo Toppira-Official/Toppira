@@ -8,9 +8,16 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="group border-border bg-background relative flex flex-col overflow-hidden rounded-2xl border shadow-sm transition hover:shadow-lg">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="800"
+      className="group border-border bg-background relative flex flex-col overflow-hidden rounded-2xl border shadow-sm transition hover:shadow-lg"
+    >
       {product.image && (
-        <div className="bg-muted aspect-video w-full overflow-hidden">
+        <div
+          data-aos="zoom-in"
+          className="bg-muted aspect-video w-full overflow-hidden"
+        >
           <img
             src={product.image}
             alt={product.name}
@@ -19,7 +26,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       )}
 
-      <div className="flex flex-1 flex-col p-6">
+      <div data-aos="fade-up" className="flex flex-1 flex-col p-6">
         {product.badge && (
           <span className="bg-primary/10 text-primary mb-3 inline-block rounded-full px-3 py-1 text-xs">
             {product.badge}
