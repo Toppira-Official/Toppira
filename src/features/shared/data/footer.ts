@@ -20,6 +20,8 @@ export const footer_data: FooterData = {
       links: [
         { label: 'Documentation', href: 'https://github.com/Toppira-Official' },
         { label: 'Guides', href: 'https://linkedin.com/company/toppira' },
+        { label: 'Products', href: '/products' },
+        { label: 'About Us', href: '/about' },
         { label: 'FAQ', href: 'https://linkedin.com/company/toppira' },
       ],
     },
