@@ -11,6 +11,7 @@
     "format": "npx prettier . --write"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
@@ -23,6 +24,7 @@
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.3",
     "@tailwindcss/vite": "^4.2.4",
+    "@types/aos": "^3.0.7",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
