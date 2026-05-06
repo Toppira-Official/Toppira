@@ -12,29 +12,59 @@ export const ContributorsSection: React.FC = () => {
       <div className="container py-8">
         <div className="max-w-2xl">
           {eyebrow && (
-            <p className="text-accent text-xs tracking-[0.2em] uppercase">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="700"
+              className="text-accent text-xs tracking-[0.2em] uppercase"
+            >
               {eyebrow}
             </p>
           )}
 
-          <h2 className="text-primary font-ernesto mt-2 text-4xl">{title}</h2>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="120"
+            data-aos-duration="800"
+            className="text-primary font-ernesto mt-2 text-4xl"
+          >
+            {title}
+          </h2>
 
           {subtitle && (
-            <p className="text-accent mt-1 text-xs tracking-[0.2em] uppercase">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="220"
+              data-aos-duration="800"
+              className="text-accent mt-1 text-xs tracking-[0.2em] uppercase"
+            >
               {subtitle}
             </p>
           )}
 
           {description && (
-            <p className="text-muted mt-4 text-sm leading-relaxed">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="320"
+              data-aos-duration="900"
+              className="text-muted mt-4 text-sm leading-relaxed"
+            >
               {description}
             </p>
           )}
         </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {contributors.map((contributor) => (
-            <ContributorCard key={contributor.id} contributor={contributor} />
+        <div
+          data-aos="fade-up"
+          data-aos-delay="420"
+          data-aos-duration="900"
+          className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
+          {contributors.map((contributor, idx) => (
+            <ContributorCard
+              key={contributor.id}
+              contributor={contributor}
+              index={idx}
+            />
           ))}
         </div>
       </div>
@@ -44,9 +74,13 @@ export const ContributorsSection: React.FC = () => {
 
 interface ContributorCardProps {
   contributor: Contributor;
+  index: number;
 }
 
-const ContributorCard: React.FC<ContributorCardProps> = ({ contributor }) => {
+const ContributorCard: React.FC<ContributorCardProps> = ({
+  contributor,
+  index,
+}) => {
   const {
     name,
     handle,
@@ -69,8 +103,17 @@ const ContributorCard: React.FC<ContributorCardProps> = ({ contributor }) => {
     .slice(0, 2);
 
   return (
-    <article className="border-border bg-surface/90 hover:bg-surface-2 flex h-full flex-col rounded-2xl border p-5 shadow-sm transition-transform duration-150 hover:-translate-y-0.5">
-      <div className="flex items-center gap-3">
+    <article
+      data-aos="fade-up"
+      data-aos-delay={500 + index * 120}
+      data-aos-duration="800"
+      className="border-border bg-surface/90 hover:bg-surface-2 flex h-full flex-col rounded-2xl border p-5 shadow-sm transition-transform duration-150 hover:-translate-y-0.5"
+    >
+      <div
+        data-aos="fade-up"
+        data-aos-delay={600 + index * 120}
+        className="flex items-center gap-3"
+      >
         {avatarUrl ? (
           <img
             src={avatarUrl}
@@ -101,11 +144,22 @@ const ContributorCard: React.FC<ContributorCardProps> = ({ contributor }) => {
       </div>
 
       {expertise && (
-        <p className="text-muted mt-4 text-xs leading-relaxed">{expertise}</p>
+        <p
+          data-aos="fade-up"
+          data-aos-delay={700 + index * 120}
+          data-aos-duration="800"
+          className="text-muted mt-4 text-xs leading-relaxed"
+        >
+          {expertise}
+        </p>
       )}
 
       {(githubUrl || linkedinUrl || twitterUrl || websiteUrl) && (
-        <div className="text-accent mt-4 flex items-center gap-3 text-xs">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={800 + index * 120}
+          className="text-accent mt-4 flex items-center gap-3 text-xs"
+        >
           {githubUrl && (
             <a
               href={githubUrl}
