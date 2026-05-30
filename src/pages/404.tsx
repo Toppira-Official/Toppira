@@ -1,9 +1,13 @@
+import { Seo } from '@/features/shared/components/seo';
+import { pagesSeo } from '@/features/shared/config/seo';
 import type React from 'react';
 import { Link } from 'react-router-dom';
 
 export const NotFound: React.FC = () => {
   return (
-    <main className="bg-background flex min-h-screen items-center justify-center px-6">
+    <>
+      <Seo {...pagesSeo.notFound} noIndex />
+      <main className="bg-background flex min-h-screen items-center justify-center px-6">
       <div className="text-center">
         <p data-aos="fade-down" className="text-muted text-sm">
           Error 404
@@ -34,5 +38,6 @@ export const NotFound: React.FC = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };

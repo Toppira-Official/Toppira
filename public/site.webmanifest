@@ -1,0 +1,16 @@
+{
+  "name": "Toppira",
+  "short_name": "Toppira",
+  "description": "Open-source platform that combines everyday apps with AI for better and faster communication.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}

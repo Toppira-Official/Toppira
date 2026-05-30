@@ -4,13 +4,17 @@ import { Trust } from '@/features/home/components/trust';
 import { UseCases } from '@/features/home/components/usecase';
 import { USP } from '@/features/home/components/USP';
 import { Vision } from '@/features/home/components/vision';
+import { Seo } from '@/features/shared/components/seo';
+import { pagesSeo } from '@/features/shared/config/seo';
 import type React from 'react';
 import { Hero } from '~features/home/components/hero';
 import { ProblemSolution } from '~features/home/components/problem_solution';
 
 export const Home: React.FC = () => {
   return (
-    <main className="mt-20 space-y-20">
+    <>
+      <Seo {...pagesSeo.home} />
+      <main className="mt-20 space-y-20">
       <Hero />
       <ProblemSolution />
       <USP />
@@ -20,5 +24,6 @@ export const Home: React.FC = () => {
       <Vision />
       <CTA />
     </main>
+    </>
   );
 };
