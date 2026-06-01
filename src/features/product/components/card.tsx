@@ -11,35 +11,35 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div
       data-aos="fade-up"
       data-aos-duration="800"
-      className="group border-border bg-background relative flex flex-col overflow-hidden rounded-2xl border shadow-sm transition hover:shadow-lg"
+      className="group border-border bg-background relative flex h-full flex-col overflow-hidden rounded-2xl border shadow-sm transition hover:shadow-lg"
     >
-      {product.image && (
-        <div
-          data-aos="zoom-in"
-          className="bg-muted aspect-video w-full overflow-hidden"
-        >
-          <img
-            src={product.image}
-            alt={product.name}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-      )}
-
       <div data-aos="fade-up" className="flex flex-1 flex-col p-6">
-        {product.badge && (
-          <span className="bg-primary/10 text-primary mb-3 inline-block rounded-full px-3 py-1 text-xs">
-            {product.badge}
-          </span>
-        )}
+        <div className="flex items-start gap-4">
+          {product.image && (
+            <img
+              data-aos="zoom-in"
+              src={product.image}
+              alt={product.name}
+              className="border-border bg-muted h-16 w-16 shrink-0 rounded-full border-2 object-cover shadow-sm transition duration-300 group-hover:scale-105"
+            />
+          )}
 
-        <h3 className="text-xl">{product.name}</h3>
+          <div className="min-w-0 flex-1">
+            {product.badge && (
+              <span className="bg-primary/10 text-primary mb-2 inline-block rounded-full px-3 py-1 text-xs">
+                {product.badge}
+              </span>
+            )}
 
-        <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+            <h3 className="text-xl">{product.name}</h3>
+          </div>
+        </div>
+
+        <p className="text-muted-foreground mt-4 flex-1 text-sm leading-relaxed">
           {product.description}
         </p>
 
-        <div className="mt-6 flex items-center gap-4">
+        <div className="mt-6 flex items-center gap-4 pt-2">
           {product.website && (
             <a
               href={product.website.href}
